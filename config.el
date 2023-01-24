@@ -74,3 +74,9 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+
+(after! python
+  (add-hook 'python-mode-hook
+            '(lambda () (setq python-indent 2))))
