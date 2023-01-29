@@ -80,3 +80,7 @@
 (after! python
   (add-hook 'python-mode-hook
             '(lambda () (setq python-indent 2))))
+
+(good-scroll-mode 1)
+
+(add-hook 'prog-mode-hook #'highlight-symbol-mode)
