@@ -83,8 +83,7 @@
             
 (after! python
   (add-hook 'python-mode-hook
-             (lambda () 
-               (require 'sphinx-doc)
+             (lambda ()
                (sphinx-doc-mode t))))  
 
 (good-scroll-mode 1)
