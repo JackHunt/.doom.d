@@ -54,3 +54,5 @@
 (package! good-scroll)
 
 (package! highlight-symbol)
+
+(package! sphinx-doc)
