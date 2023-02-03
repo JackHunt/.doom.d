@@ -84,3 +84,18 @@
 (good-scroll-mode 1)
 
 (add-hook 'prog-mode-hook #'highlight-symbol-mode)
+
+(defun scroll-down-in-place (n)
+  (interactive "p")
+  (previous-line n)
+  (unless (eq (window-start) (point-min))
+    (scroll-down n)))
+
+(defun scroll-up-in-place (n)
+  (interactive "p")
+  (next-line n)
+  (unless (eq (window-end) (point-max))
+    (scroll-up n)))
+
+(global-set-key "\M-n" 'scroll-up-in-place)
+(global-set-key "\M-p" 'scroll-down-in-place)
