@@ -80,6 +80,11 @@
 (after! python
   (add-hook 'python-mode-hook
             '(lambda () (setq python-indent 2))))
+            
+(after! python
+  (add-hook 'python-mode-hook
+             (lambda ()
+               (sphinx-doc-mode t))))  
 
 (good-scroll-mode 1)
 
