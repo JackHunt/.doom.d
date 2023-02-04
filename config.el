@@ -75,8 +75,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; 80 char line.
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 
+;; Python specific stuff.
 (after! python
   (add-hook 'python-mode-hook
             '(lambda () (setq python-indent 2))))
@@ -84,12 +86,12 @@
 (after! python
   (add-hook 'python-mode-hook
              (lambda ()
-               (sphinx-doc-mode t))))  
+               (sphinx-doc-mode t))))
 
-(good-scroll-mode 1)
-
+;; Show other instances of vars etc.
 (add-hook 'prog-mode-hook #'highlight-symbol-mode)
 
+;; Scroll the buffer, not the cursor.
 (defun scroll-down-in-place (n)
   (interactive "p")
   (previous-line n)
@@ -104,3 +106,11 @@
 
 (global-set-key "\M-n" 'scroll-up-in-place)
 (global-set-key "\M-p" 'scroll-down-in-place)
+
+;; Code formatting.
+(after! format-all
+  (add-to-list 'language-id--definitions
+               '("PHP"
+                 php-mode
+                 (web-mode
+                  (web-mode-engine "blade")))))
