@@ -90,8 +90,8 @@
                (setq sphinx-doc-include-types t))))
 
 (custom-set-variables 
-    '(conda-anaconda-home (expand-file-name "/opt/miniconda3")
-    '(conda-env-home-directory (expand-file-name "~/conda/envs"))
+    '(conda-anaconda-home "/opt/miniconda3")
+    '(conda-env-home-directory "~/conda/envs"))
 
 ;; Show other instances of vars etc.
 (add-hook 'prog-mode-hook #'highlight-symbol-mode)
