@@ -88,7 +88,9 @@
              (lambda ()
                (sphinx-doc-mode t)
                (setq sphinx-doc-include-types t))))
-
+  
+;; Conda
+(setq exec-path (append exec-path '("/opt/miniconda3/bin")))
 (setq conda-anaconda-home (expand-file-name "/opt/miniconda3")
 (setq conda-env-home-directory (expand-file-name "~/conda/envs")
 
