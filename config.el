@@ -90,9 +90,10 @@
                (setq sphinx-doc-include-types t))))
   
 ;; Conda
-(setenv "PATH" (concat (getenv "PATH") ":/opt/miniconda3/bin"))
-(setq conda-anaconda-home (expand-file-name "/opt/miniconda3")
-(setq conda-env-home-directory (expand-file-name "~/conda/envs")
+;;(setenv "PATH" (concat (getenv "PATH") ":/opt/miniconda3/bin"))
+;;(setq conda-anaconda-home (expand-file-name "/opt/miniconda3"))
+;;(custom-set-variables
+;;  '(conda-anaconda-home "~/.conda"))
 
 ;; Show other instances of vars etc.
 (add-hook 'prog-mode-hook #'highlight-symbol-mode)
