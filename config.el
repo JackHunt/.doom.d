@@ -118,3 +118,6 @@
               (ansi-color-context-region nil))
           (ansi-color-apply-on-region beg end))))))
 (add-hook 'org-babel-after-execute-hook 'jh/babel-ansi)
+
+(setq yas-snippet-dirs
+  (append yas-snippet-dirs '("~/.doom.d/snippets")))
