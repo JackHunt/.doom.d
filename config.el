@@ -1,4 +1,4 @@
-;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+Reload last s;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
@@ -81,7 +81,7 @@
 ;; Python specific stuff.
 (after! python
   (add-hook 'python-mode-hook
-            '(lambda () (setq python-indent 2))))
+            '(lambda () (setq python-indent 4))))
             
 (after! python
   (add-hook 'python-mode-hook
